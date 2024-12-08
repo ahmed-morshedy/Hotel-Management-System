@@ -20,7 +20,7 @@ namespace Tolip
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 
         {
-            FormLogin formLogin = new FormLogin();
+            Form2 formLogin = new Form2();
             formLogin.Show();
             this.Hide();
 

@@ -90,14 +90,14 @@
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(160, 182);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(381, 26);
+            this.textBoxPassword.Size = new System.Drawing.Size(381, 30);
             this.textBoxPassword.TabIndex = 5;
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Location = new System.Drawing.Point(160, 92);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(411, 26);
+            this.textBoxUsername.Size = new System.Drawing.Size(411, 30);
             this.textBoxUsername.TabIndex = 4;
             // 
             // linkLabel1
@@ -107,17 +107,18 @@
             this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(402, 296);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(89, 24);
+            this.linkLabel1.Size = new System.Drawing.Size(119, 33);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Register";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(251, 296);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 18);
+            this.label3.Size = new System.Drawing.Size(170, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Forgot Password?";
             // 
@@ -127,7 +128,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(157, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 18);
+            this.label2.Size = new System.Drawing.Size(101, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
@@ -137,7 +138,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(157, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 18);
+            this.label1.Size = new System.Drawing.Size(108, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
@@ -168,7 +169,7 @@
             this.label4.ForeColor = System.Drawing.Color.Sienna;
             this.label4.Location = new System.Drawing.Point(1564, 797);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 33);
+            this.label4.Size = new System.Drawing.Size(182, 40);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tolip Hotel";
             // 
@@ -194,7 +195,7 @@
             // 
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 981);
+            this.panel2.Location = new System.Drawing.Point(0, 975);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1924, 80);
             this.panel2.TabIndex = 5;
@@ -204,18 +205,20 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 17);
+            this.label5.Size = new System.Drawing.Size(264, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "CopyRight@.All Right Reserved";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Tolip.Properties.Resources._61;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);

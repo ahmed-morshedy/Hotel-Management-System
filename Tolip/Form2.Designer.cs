@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Sienna;
-            this.groupBox1.Location = new System.Drawing.Point(138, 233);
+            this.groupBox1.Location = new System.Drawing.Point(52, 228);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -176,7 +176,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(953, 168);
+            this.panel1.Location = new System.Drawing.Point(837, 155);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 550);
             this.panel1.TabIndex = 4;
@@ -184,7 +184,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tolip.Properties.Resources._11;
-            this.pictureBox1.Location = new System.Drawing.Point(1078, 294);
+            this.pictureBox1.Location = new System.Drawing.Point(913, 252);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(558, 380);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

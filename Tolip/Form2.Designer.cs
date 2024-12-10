@@ -68,7 +68,7 @@ namespace Tolip
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Sienna;
-            this.groupBox1.Location = new System.Drawing.Point(152, 388);
+            this.groupBox1.Location = new System.Drawing.Point(52, 228);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -181,8 +181,11 @@ namespace Tolip
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(837, 155);
+
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 1055);
             this.panel1.TabIndex = 4;
@@ -191,7 +194,7 @@ namespace Tolip
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Tolip.Properties.Resources._11;
-            this.pictureBox1.Location = new System.Drawing.Point(1354, 436);
+            this.pictureBox1.Location = new System.Drawing.Point(913, 252);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(558, 380);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -202,9 +205,15 @@ namespace Tolip
             // 
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+
             this.panel2.Location = new System.Drawing.Point(10, 975);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1914, 80);
+
+            this.panel2.Location = new System.Drawing.Point(0, 812);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1738, 80);
+
             this.panel2.TabIndex = 5;
             // 
             // label5
@@ -226,7 +235,7 @@ namespace Tolip
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Tolip.Properties.Resources._61;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1738, 892);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);

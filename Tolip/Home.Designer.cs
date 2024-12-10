@@ -44,10 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -247,7 +245,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -255,17 +252,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1366, 177);
             this.panel2.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(173, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 23);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "?";
             // 
             // label3
             // 
@@ -281,7 +267,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.linkLabel1);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -289,17 +274,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1366, 85);
             this.panel4.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(6, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "?";
             // 
             // linkLabel1
             // 
@@ -422,7 +396,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnService;
@@ -430,7 +403,6 @@
         private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnDash;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnReview;
         private System.Windows.Forms.Button btnSetting;

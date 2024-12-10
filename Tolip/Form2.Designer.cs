@@ -1,4 +1,6 @@
-﻿namespace Tolip
+﻿using System.Windows.Forms;
+
+namespace Tolip
 {
     partial class Form2
     {
@@ -52,6 +54,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.textBoxUsername);
@@ -104,10 +109,10 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(402, 296);
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(402, 302);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(119, 33);
+            this.linkLabel1.Size = new System.Drawing.Size(101, 27);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Register";
@@ -116,7 +121,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(251, 296);
+            this.label3.Location = new System.Drawing.Point(238, 306);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 23);
             this.label3.TabIndex = 2;
@@ -145,9 +150,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Tolip.Properties.Resources._32;
-            this.pictureBox3.Location = new System.Drawing.Point(538, 182);
+            this.pictureBox3.Location = new System.Drawing.Point(547, 182);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 26);
+            this.pictureBox3.Size = new System.Drawing.Size(24, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -155,9 +160,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tolip.Properties.Resources._22;
-            this.pictureBox2.Location = new System.Drawing.Point(538, 182);
+            this.pictureBox2.Location = new System.Drawing.Point(547, 182);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 26);
+            this.pictureBox2.Size = new System.Drawing.Size(24, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -176,13 +181,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(1041, 330);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 550);
+            this.panel1.Size = new System.Drawing.Size(10, 1055);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Tolip.Properties.Resources._11;
             this.pictureBox1.Location = new System.Drawing.Point(1354, 436);
             this.pictureBox1.Name = "pictureBox1";
@@ -195,9 +202,9 @@
             // 
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 975);
+            this.panel2.Location = new System.Drawing.Point(10, 975);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1924, 80);
+            this.panel2.Size = new System.Drawing.Size(1914, 80);
             this.panel2.TabIndex = 5;
             // 
             // label5
@@ -211,8 +218,9 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;

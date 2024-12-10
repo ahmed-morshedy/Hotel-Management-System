@@ -73,7 +73,7 @@ namespace Tolip
             this.groupBox1.ForeColor = System.Drawing.Color.Sienna;
             this.groupBox1.Location = new System.Drawing.Point(42, 182);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1512, 361);
+            this.groupBox1.Size = new System.Drawing.Size(1818, 361);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Please Login First";
@@ -213,7 +213,7 @@ namespace Tolip
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Tolip.Properties.Resources._11;
-            this.pictureBox1.Location = new System.Drawing.Point(1648, 202);
+            this.pictureBox1.Location = new System.Drawing.Point(1954, 202);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(446, 304);

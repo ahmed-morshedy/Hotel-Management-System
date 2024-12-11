@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace Tolip
 {
@@ -27,24 +29,56 @@ namespace Tolip
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool check = db.IsValidNamePass(textBoxUsername.Text.Trim(), textBoxPassword.Text.Trim());
-            if (textBoxUsername.Text.Trim() == string.Empty || textBoxPassword.Text.Trim() == string.Empty)
-                MessageBox.Show("Please fill out all field.", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-            {
-                if (check)
-                {
-                    Home fd = new Home();
-                    fd.Username = textBoxUsername.Text;
-                    textBoxUsername.Clear();
-                    textBoxPassword.Clear();
-                    fd.Show();
-                }
-                else
-                    MessageBox.Show("Invalid Username or Passwod.", "Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            // Define your connection string
+            string connectionString = "Server=localhost;Database=Hotel_Management_System;Trusted_Connection=True;";
 
+            // Ensure username and password fields are not empty
+            if (textBoxUsername.Text.Trim() == string.Empty || textBoxPassword.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Please fill out all fields.", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
 
+            try
+            {
+            
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    string query = "SELECT COUNT(1) FROM User_Table WHERE User_Name = @Username AND User_Password = @Password";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                      
+                        cmd.Parameters.AddWithValue("@Username", textBoxUsername.Text);
+                        cmd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
+
+                        
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        if (count == 1)
+                        {
+                         
+                            Home fd = new Home();
+                            fd.Username = textBoxUsername.Text;
+                            textBoxUsername.Clear();
+                            textBoxPassword.Clear();
+                            fd.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            // If authentication fails
+                            MessageBox.Show("Invalid Username or Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that occur during the connection or execution
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -74,4 +108,6 @@ namespace Tolip
             toolTip1.SetToolTip(pictureBox2, "Show Password");
         }
     }
+
+   
 }

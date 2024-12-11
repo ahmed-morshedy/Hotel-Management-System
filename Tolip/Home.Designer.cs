@@ -51,13 +51,13 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.reviews1 = new Tolip.User_Controls.Reviews();
+            this.payment1 = new Tolip.User_Controls.Payment();
             this.services1 = new Tolip.User_Controls.Services();
             this.userControlReservation1 = new Tolip.User_Controls.UserControlReservation();
             this.userControlRoom1 = new Tolip.User_Controls.UserControlRoom();
             this.userControlClient1 = new Tolip.User_Controls.UserControlClient();
             this.dashboard1 = new Tolip.User_Controls.Dashboard();
-            this.payment1 = new Tolip.User_Controls.Payment();
-            this.reviews1 = new Tolip.User_Controls.Reviews();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,7 +123,7 @@
             this.btnReview.Margin = new System.Windows.Forms.Padding(2);
             this.btnReview.Name = "btnReview";
             this.btnReview.Size = new System.Drawing.Size(238, 50);
-            this.btnReview.TabIndex = 4;
+            this.btnReview.TabIndex = 7;
             this.btnReview.Text = "Reviews";
             this.btnReview.UseVisualStyleBackColor = true;
             this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
@@ -157,7 +157,7 @@
             this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(238, 50);
-            this.btnPayment.TabIndex = 2;
+            this.btnPayment.TabIndex = 6;
             this.btnPayment.Text = "Payment";
             this.btnPayment.UseVisualStyleBackColor = true;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
@@ -274,7 +274,7 @@
             this.panel2.Location = new System.Drawing.Point(279, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(749, 144);
+            this.panel2.Size = new System.Drawing.Size(1020, 144);
             this.panel2.TabIndex = 0;
             // 
             // labelUsername
@@ -310,7 +310,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(749, 69);
+            this.panel4.Size = new System.Drawing.Size(1020, 69);
             this.panel4.TabIndex = 0;
             // 
             // labelDataTime
@@ -336,6 +336,7 @@
             this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Log Out";
+            
             // 
             // pictureBox2
             // 
@@ -351,6 +352,24 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // reviews1
+            // 
+            this.reviews1.BackColor = System.Drawing.Color.White;
+            this.reviews1.Location = new System.Drawing.Point(277, 144);
+            this.reviews1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reviews1.Name = "reviews1";
+            this.reviews1.Size = new System.Drawing.Size(1024, 578);
+            this.reviews1.TabIndex = 7;
+            // 
+            // payment1
+            // 
+            this.payment1.BackColor = System.Drawing.Color.White;
+            this.payment1.Location = new System.Drawing.Point(278, 143);
+            this.payment1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.payment1.Name = "payment1";
+            this.payment1.Size = new System.Drawing.Size(1022, 578);
+            this.payment1.TabIndex = 6;
             // 
             // services1
             // 
@@ -395,29 +414,11 @@
             this.dashboard1.Size = new System.Drawing.Size(1022, 578);
             this.dashboard1.TabIndex = 1;
             // 
-            // payment1
-            // 
-            this.payment1.BackColor = System.Drawing.Color.White;
-            this.payment1.Location = new System.Drawing.Point(278, 143);
-            this.payment1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.payment1.Name = "payment1";
-            this.payment1.Size = new System.Drawing.Size(1022, 578);
-            this.payment1.TabIndex = 6;
-            // 
-            // reviews1
-            // 
-            this.reviews1.BackColor = System.Drawing.Color.White;
-            this.reviews1.Location = new System.Drawing.Point(277, 144);
-            this.reviews1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reviews1.Name = "reviews1";
-            this.reviews1.Size = new System.Drawing.Size(1024, 578);
-            this.reviews1.TabIndex = 7;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1299, 609);
             this.Controls.Add(this.reviews1);
             this.Controls.Add(this.payment1);
             this.Controls.Add(this.services1);

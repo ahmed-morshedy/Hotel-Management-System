@@ -78,7 +78,14 @@ namespace Tolip
 
         private void btnReview_Click(object sender, EventArgs e)
         {
-            MovePanel(btnReserve);
+            MovePanel(btnReview);
         }
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form2 fd = new Form2();
+            fd.Show();
+            this.Hide();
+        }
+
     }
 }

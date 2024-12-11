@@ -53,32 +53,32 @@ namespace Tolip
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            MovePanel(btnClient_Click);
+            MovePanel(btnClient);
         }
 
         private void btnRoom_Click(object sender, EventArgs e)
         {
-            btnClient_Click(btnRoom_Click);
+            MovePanel(btnRoom);
         }
 
         private void btnReserve_Click(object sender, EventArgs e)
         {
-            btnClient_Click(btnReserve_Click);
+            MovePanel(btnReserve);
         }
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            btnClient_Click(btnService_Click);
+            MovePanel(btnService);
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            btnClient_Click(btnPayment_Click);
+            MovePanel(btnPayment);
         }
 
         private void btnReview_Click(object sender, EventArgs e)
         {
-            btnClient_Click(btnReserve_Click);
+            MovePanel(btnReserve);
         }
     }
 }

@@ -73,7 +73,7 @@ namespace Tolip
             this.groupBox1.ForeColor = System.Drawing.Color.Sienna;
             this.groupBox1.Location = new System.Drawing.Point(42, 182);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1818, 361);
+            this.groupBox1.Size = new System.Drawing.Size(2124, 361);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Please Login First";
@@ -163,7 +163,7 @@ namespace Tolip
             this.pictureBox3.Location = new System.Drawing.Point(439, 146);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(19, 24);
+            this.pictureBox3.Size = new System.Drawing.Size(19, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -179,7 +179,7 @@ namespace Tolip
             this.pictureBox2.Location = new System.Drawing.Point(439, 146);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(19, 24);
+            this.pictureBox2.Size = new System.Drawing.Size(19, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -213,7 +213,7 @@ namespace Tolip
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Tolip.Properties.Resources._11;
-            this.pictureBox1.Location = new System.Drawing.Point(1954, 202);
+            this.pictureBox1.Location = new System.Drawing.Point(2260, 202);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(446, 304);

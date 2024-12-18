@@ -87,7 +87,7 @@
             this.tabControlReservation.Controls.Add(this.tabPageSearchReservation);
             this.tabControlReservation.Controls.Add(this.tabPageUpdateAndCancelReservation);
             this.tabControlReservation.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlReservation.Location = new System.Drawing.Point(28, 56);
+            this.tabControlReservation.Location = new System.Drawing.Point(4, 18);
             this.tabControlReservation.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlReservation.Name = "tabControlReservation";
             this.tabControlReservation.SelectedIndex = 0;
@@ -636,7 +636,7 @@
             this.Controls.Add(this.tabControlReservation);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlReservation";
-            this.Size = new System.Drawing.Size(1363, 712);
+            this.Size = new System.Drawing.Size(1301, 652);
             this.Load += new System.EventHandler(this.UserControlReservation_Load);
             this.tabControlReservation.ResumeLayout(false);
             this.tabPageAddReservation.ResumeLayout(false);

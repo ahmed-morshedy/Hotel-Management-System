@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LabelUserCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelClientCount = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelRoomCount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -52,7 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.LabelUserCount);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(145, 174);
@@ -60,14 +60,16 @@
             this.panel1.Size = new System.Drawing.Size(324, 145);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // LabelUserCount
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.LabelUserCount.AutoSize = true;
+            this.LabelUserCount.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelUserCount.ForeColor = System.Drawing.Color.White;
+            this.LabelUserCount.Location = new System.Drawing.Point(156, 86);
+            this.LabelUserCount.Name = "LabelUserCount";
+            this.LabelUserCount.Size = new System.Drawing.Size(25, 31);
+            this.LabelUserCount.TabIndex = 2;
+            this.LabelUserCount.Text = "?";
             // 
             // label1
             // 
@@ -80,21 +82,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "User :";
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(156, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 31);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "?";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(53)))), ((int)(((byte)(48)))));
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelClientCount);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(495, 405);
@@ -102,16 +102,16 @@
             this.panel2.Size = new System.Drawing.Size(324, 145);
             this.panel2.TabIndex = 1;
             // 
-            // label3
+            // labelClientCount
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(156, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "?";
+            this.labelClientCount.AutoSize = true;
+            this.labelClientCount.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClientCount.ForeColor = System.Drawing.Color.White;
+            this.labelClientCount.Location = new System.Drawing.Point(156, 86);
+            this.labelClientCount.Name = "labelClientCount";
+            this.labelClientCount.Size = new System.Drawing.Size(25, 31);
+            this.labelClientCount.TabIndex = 2;
+            this.labelClientCount.Text = "?";
             // 
             // label4
             // 
@@ -136,7 +136,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Sienna;
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.labelRoomCount);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(852, 174);
@@ -144,16 +144,16 @@
             this.panel3.Size = new System.Drawing.Size(324, 145);
             this.panel3.TabIndex = 2;
             // 
-            // label5
+            // labelRoomCount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(156, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 31);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "?";
+            this.labelRoomCount.AutoSize = true;
+            this.labelRoomCount.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRoomCount.ForeColor = System.Drawing.Color.White;
+            this.labelRoomCount.Location = new System.Drawing.Point(156, 86);
+            this.labelRoomCount.Name = "labelRoomCount";
+            this.labelRoomCount.Size = new System.Drawing.Size(25, 31);
+            this.labelRoomCount.TabIndex = 2;
+            this.labelRoomCount.Text = "?";
             // 
             // label6
             // 
@@ -184,6 +184,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Dashboard";
             this.Size = new System.Drawing.Size(1363, 712);
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -202,13 +203,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LabelUserCount;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelClientCount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelRoomCount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
     }

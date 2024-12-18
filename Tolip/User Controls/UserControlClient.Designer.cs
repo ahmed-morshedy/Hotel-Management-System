@@ -76,7 +76,7 @@
             this.tabControlClient.Controls.Add(this.tabPageAddClient);
             this.tabControlClient.Controls.Add(this.tabPageSearchClient);
             this.tabControlClient.Controls.Add(this.tabPageUpdateandDeleteClient);
-            this.tabControlClient.Location = new System.Drawing.Point(70, 110);
+            this.tabControlClient.Location = new System.Drawing.Point(21, 23);
             this.tabControlClient.Name = "tabControlClient";
             this.tabControlClient.SelectedIndex = 0;
             this.tabControlClient.Size = new System.Drawing.Size(1218, 524);
@@ -167,6 +167,7 @@
             this.buttonAdd.TabIndex = 11;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxLastName
             // 
@@ -219,6 +220,8 @@
             this.tabPageSearchClient.TabIndex = 1;
             this.tabPageSearchClient.Text = "Search Client";
             this.tabPageSearchClient.UseVisualStyleBackColor = true;
+            this.tabPageSearchClient.Enter += new System.EventHandler(this.tabpageSearchclient_Enter);
+            this.tabPageSearchClient.Leave += new System.EventHandler(this.tabPageSearchClient_Leave);
             // 
             // label14
             // 
@@ -251,6 +254,7 @@
             this.dataGridViewClient.RowHeadersWidth = 51;
             this.dataGridViewClient.Size = new System.Drawing.Size(1198, 267);
             this.dataGridViewClient.TabIndex = 7;
+            this.dataGridViewClient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClient_CellClick);
             // 
             // Column1
             // 
@@ -299,6 +303,7 @@
             this.textBoxSearchPhoneNo.Name = "textBoxSearchPhoneNo";
             this.textBoxSearchPhoneNo.Size = new System.Drawing.Size(353, 27);
             this.textBoxSearchPhoneNo.TabIndex = 6;
+            this.textBoxSearchPhoneNo.TextChanged += new System.EventHandler(this.textBoxSearchPhoneNo_TextChanged);
             // 
             // label6
             // 
@@ -331,6 +336,7 @@
             this.tabPageUpdateandDeleteClient.TabIndex = 2;
             this.tabPageUpdateandDeleteClient.Text = "Update and Delete Client";
             this.tabPageUpdateandDeleteClient.UseVisualStyleBackColor = true;
+            this.tabPageUpdateandDeleteClient.Leave += new System.EventHandler(this.tabPageUpdateandDeleteClient_Leave);
             // 
             // buttonDelete
             // 
@@ -347,6 +353,7 @@
             this.buttonDelete.TabIndex = 26;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click_1);
             // 
             // textBoxAddress1
             // 
@@ -402,6 +409,7 @@
             this.buttonUpdate.TabIndex = 21;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click_1);
             // 
             // textBoxLastName1
             // 
@@ -447,7 +455,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Sienna;
-            this.label12.Location = new System.Drawing.Point(3, 29);
+            this.label12.Location = new System.Drawing.Point(20, 3);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(251, 23);
             this.label12.TabIndex = 16;
@@ -460,9 +468,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabControlClient);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UserControlClient";
-            this.Size = new System.Drawing.Size(1363, 712);
+            this.Size = new System.Drawing.Size(1269, 592);
             this.tabControlClient.ResumeLayout(false);
             this.tabPageAddClient.ResumeLayout(false);
             this.tabPageAddClient.PerformLayout();

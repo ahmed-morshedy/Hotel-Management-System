@@ -32,13 +32,13 @@
             this.tabPageAddReservation = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerOut = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePickerIn = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxNo = new System.Windows.Forms.ComboBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.btnAddReservation = new System.Windows.Forms.Button();
+            this.textBoxClientID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.tabPageUpdateAndCancelReservation = new System.Windows.Forms.TabPage();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePickerOut2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerOut1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePickerIn1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxNo1 = new System.Windows.Forms.ComboBox();
@@ -98,13 +98,13 @@
             // 
             this.tabPageAddReservation.Controls.Add(this.label13);
             this.tabPageAddReservation.Controls.Add(this.label1);
-            this.tabPageAddReservation.Controls.Add(this.dateTimePicker1);
+            this.tabPageAddReservation.Controls.Add(this.dateTimePickerOut);
             this.tabPageAddReservation.Controls.Add(this.label2);
-            this.tabPageAddReservation.Controls.Add(this.dateTimePicker2);
-            this.tabPageAddReservation.Controls.Add(this.comboBox1);
-            this.tabPageAddReservation.Controls.Add(this.comboBox2);
-            this.tabPageAddReservation.Controls.Add(this.button2);
-            this.tabPageAddReservation.Controls.Add(this.textBox1);
+            this.tabPageAddReservation.Controls.Add(this.dateTimePickerIn);
+            this.tabPageAddReservation.Controls.Add(this.comboBoxNo);
+            this.tabPageAddReservation.Controls.Add(this.comboBoxType);
+            this.tabPageAddReservation.Controls.Add(this.btnAddReservation);
+            this.tabPageAddReservation.Controls.Add(this.textBoxClientID);
             this.tabPageAddReservation.Controls.Add(this.label3);
             this.tabPageAddReservation.Controls.Add(this.textBox4);
             this.tabPageAddReservation.Controls.Add(this.label4);
@@ -118,6 +118,7 @@
             this.tabPageAddReservation.TabIndex = 0;
             this.tabPageAddReservation.Text = "Add Reservation";
             this.tabPageAddReservation.UseVisualStyleBackColor = true;
+            this.tabPageAddReservation.Leave += new System.EventHandler(this.tabPageAddReservation_Leave);
             // 
             // label13
             // 
@@ -143,14 +144,14 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "Out:";
             // 
-            // dateTimePicker1
+            // dateTimePickerOut
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(760, 389);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(469, 27);
-            this.dateTimePicker1.TabIndex = 57;
+            this.dateTimePickerOut.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerOut.Location = new System.Drawing.Point(760, 389);
+            this.dateTimePickerOut.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerOut.Name = "dateTimePickerOut";
+            this.dateTimePickerOut.Size = new System.Drawing.Size(469, 27);
+            this.dateTimePickerOut.TabIndex = 57;
             // 
             // label2
             // 
@@ -164,69 +165,76 @@
             this.label2.TabIndex = 56;
             this.label2.Text = "In:";
             // 
-            // dateTimePicker2
+            // dateTimePickerIn
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.Location = new System.Drawing.Point(60, 389);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(469, 27);
-            this.dateTimePicker2.TabIndex = 55;
+            this.dateTimePickerIn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerIn.Location = new System.Drawing.Point(60, 389);
+            this.dateTimePickerIn.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerIn.Name = "dateTimePickerIn";
+            this.dateTimePickerIn.Size = new System.Drawing.Size(469, 27);
+            this.dateTimePickerIn.TabIndex = 55;
             // 
-            // comboBox1
+            // comboBoxNo
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(760, 206);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(469, 29);
-            this.comboBox1.TabIndex = 54;
+            this.comboBoxNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxNo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.comboBoxNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxNo.FormattingEnabled = true;
+            this.comboBoxNo.Items.AddRange(new object[] {
+            "Please Select ..."});
+            this.comboBoxNo.Location = new System.Drawing.Point(760, 206);
+            this.comboBoxNo.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxNo.Name = "comboBoxNo";
+            this.comboBoxNo.Size = new System.Drawing.Size(469, 29);
+            this.comboBoxNo.TabIndex = 54;
             // 
-            // comboBox2
+            // comboBoxType
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxType.Cursor = System.Windows.Forms.Cursors.Default;
+            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Please Select ....",
             "Single",
-            "Double"});
-            this.comboBox2.Location = new System.Drawing.Point(60, 206);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(469, 29);
-            this.comboBox2.TabIndex = 53;
+            "Double",
+            "Family",
+            "Suite"});
+            this.comboBoxType.Location = new System.Drawing.Point(60, 206);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(469, 29);
+            this.comboBoxType.TabIndex = 53;
+            this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
-            // button2
+            // btnAddReservation
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.Sienna;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(60, 425);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 38);
-            this.button2.TabIndex = 52;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddReservation.BackColor = System.Drawing.Color.Sienna;
+            this.btnAddReservation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddReservation.FlatAppearance.BorderSize = 0;
+            this.btnAddReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddReservation.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReservation.ForeColor = System.Drawing.Color.White;
+            this.btnAddReservation.Location = new System.Drawing.Point(60, 425);
+            this.btnAddReservation.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddReservation.Name = "btnAddReservation";
+            this.btnAddReservation.Size = new System.Drawing.Size(123, 38);
+            this.btnAddReservation.TabIndex = 52;
+            this.btnAddReservation.Text = "Add";
+            this.btnAddReservation.UseVisualStyleBackColor = false;
+            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
             // 
-            // textBox1
+            // textBoxClientID
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(60, 296);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(469, 27);
-            this.textBox1.TabIndex = 51;
+            this.textBoxClientID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientID.Location = new System.Drawing.Point(60, 296);
+            this.textBoxClientID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxClientID.Name = "textBoxClientID";
+            this.textBoxClientID.Size = new System.Drawing.Size(469, 27);
+            this.textBoxClientID.TabIndex = 51;
             // 
             // label3
             // 
@@ -296,6 +304,8 @@
             this.tabPageSearchReservation.TabIndex = 1;
             this.tabPageSearchReservation.Text = "Search Reservation";
             this.tabPageSearchReservation.UseVisualStyleBackColor = true;
+            this.tabPageSearchReservation.Enter += new System.EventHandler(this.tabPageSearchReservation_Enter);
+            this.tabPageSearchReservation.Leave += new System.EventHandler(this.tabPageSearchReservation_Leave);
             // 
             // label14
             // 
@@ -331,6 +341,7 @@
             this.dataGridViewReservation.RowHeadersWidth = 51;
             this.dataGridViewReservation.Size = new System.Drawing.Size(1289, 329);
             this.dataGridViewReservation.TabIndex = 11;
+            this.dataGridViewReservation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservation_CellClick);
             // 
             // Column1
             // 
@@ -388,6 +399,7 @@
             this.textBoxSearchClientID.Name = "textBoxSearchClientID";
             this.textBoxSearchClientID.Size = new System.Drawing.Size(469, 27);
             this.textBoxSearchClientID.TabIndex = 10;
+            this.textBoxSearchClientID.TextChanged += new System.EventHandler(this.textBoxSearchClientID_TextChanged);
             // 
             // label6
             // 
@@ -405,7 +417,7 @@
             // 
             this.tabPageUpdateAndCancelReservation.Controls.Add(this.buttonCancel);
             this.tabPageUpdateAndCancelReservation.Controls.Add(this.label7);
-            this.tabPageUpdateAndCancelReservation.Controls.Add(this.dateTimePickerOut2);
+            this.tabPageUpdateAndCancelReservation.Controls.Add(this.dateTimePickerOut1);
             this.tabPageUpdateAndCancelReservation.Controls.Add(this.label8);
             this.tabPageUpdateAndCancelReservation.Controls.Add(this.dateTimePickerIn1);
             this.tabPageUpdateAndCancelReservation.Controls.Add(this.comboBoxNo1);
@@ -426,6 +438,7 @@
             this.tabPageUpdateAndCancelReservation.TabIndex = 2;
             this.tabPageUpdateAndCancelReservation.Text = "Update and Cancel Reservation";
             this.tabPageUpdateAndCancelReservation.UseVisualStyleBackColor = true;
+            this.tabPageUpdateAndCancelReservation.Leave += new System.EventHandler(this.tabPageUpdateAndCancelReservation_Leave);
             // 
             // buttonCancel
             // 
@@ -441,8 +454,9 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(123, 38);
             this.buttonCancel.TabIndex = 45;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Delete";
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // label7
             // 
@@ -456,14 +470,14 @@
             this.label7.TabIndex = 44;
             this.label7.Text = "Out:";
             // 
-            // dateTimePickerOut2
+            // dateTimePickerOut1
             // 
-            this.dateTimePickerOut2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePickerOut2.Location = new System.Drawing.Point(756, 383);
-            this.dateTimePickerOut2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePickerOut2.Name = "dateTimePickerOut2";
-            this.dateTimePickerOut2.Size = new System.Drawing.Size(469, 27);
-            this.dateTimePickerOut2.TabIndex = 43;
+            this.dateTimePickerOut1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerOut1.Location = new System.Drawing.Point(756, 383);
+            this.dateTimePickerOut1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerOut1.Name = "dateTimePickerOut1";
+            this.dateTimePickerOut1.Size = new System.Drawing.Size(469, 27);
+            this.dateTimePickerOut1.TabIndex = 43;
             // 
             // label8
             // 
@@ -493,6 +507,8 @@
             this.comboBoxNo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxNo1.FormattingEnabled = true;
+            this.comboBoxNo1.Items.AddRange(new object[] {
+            "Please Select ..."});
             this.comboBoxNo1.Location = new System.Drawing.Point(756, 200);
             this.comboBoxNo1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxNo1.Name = "comboBoxNo1";
@@ -506,11 +522,18 @@
             this.comboBoxType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxType1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxType1.FormattingEnabled = true;
+            this.comboBoxType1.Items.AddRange(new object[] {
+            "Please Select ....",
+            "Single",
+            "Double",
+            "Family",
+            "Suite"});
             this.comboBoxType1.Location = new System.Drawing.Point(56, 200);
             this.comboBoxType1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxType1.Name = "comboBoxType1";
             this.comboBoxType1.Size = new System.Drawing.Size(469, 29);
             this.comboBoxType1.TabIndex = 39;
+            this.comboBoxType1.SelectedIndexChanged += new System.EventHandler(this.comboBoxType1_SelectedIndexChanged);
             // 
             // buttonUpdate
             // 
@@ -528,6 +551,7 @@
             this.buttonUpdate.TabIndex = 38;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // label9
             // 
@@ -613,6 +637,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlReservation";
             this.Size = new System.Drawing.Size(1363, 712);
+            this.Load += new System.EventHandler(this.UserControlReservation_Load);
             this.tabControlReservation.ResumeLayout(false);
             this.tabPageAddReservation.ResumeLayout(false);
             this.tabPageAddReservation.PerformLayout();
@@ -644,7 +669,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePickerOut2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerOut1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePickerIn1;
         private System.Windows.Forms.ComboBox comboBoxNo1;
@@ -658,13 +683,13 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerOut;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerIn;
+        private System.Windows.Forms.ComboBox comboBoxNo;
+        private System.Windows.Forms.ComboBox comboBoxType;
+        private System.Windows.Forms.Button btnAddReservation;
+        private System.Windows.Forms.TextBox textBoxClientID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;

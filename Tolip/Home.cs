@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tolip.User_Controls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tolip
@@ -19,6 +20,8 @@ namespace Tolip
         {
             InitializeComponent();
         }
+
+
         private void MovePanel(Control btn)
         {
             panelSlider.Top = btn.Top;
@@ -43,43 +46,59 @@ namespace Tolip
         {
 
             timer1.Start();
-            labelUsername.Text = Username;
         }
 
         private void btnDash_Click(object sender, EventArgs e)
         {
             MovePanel(btnDash);
+            userControlSetting1.Hide();
+            userControlClient1.Hide();
+            userControlRoom1.Hide();
+            userControlReservation1.Hide();
+            dashboard1.Client();
+            dashboard1.User();
+            dashboard1.Room();
+            dashboard1.Show();
         }
 
         private void btnClient_Click(object sender, EventArgs e)
         {
             MovePanel(btnClient);
+            userControlSetting1.Hide();
+            userControlClient1.Show();
+            userControlReservation1.Hide();
+            dashboard1.Hide();
+            userControlRoom1.Hide();
+
         }
 
         private void btnRoom_Click(object sender, EventArgs e)
         {
             MovePanel(btnRoom);
+            userControlSetting1.Hide();
+            userControlClient1.Hide();
+            userControlReservation1.Hide();
+            dashboard1.Hide();
+            userControlRoom1.Show();
+
+
         }
 
         private void btnReserve_Click(object sender, EventArgs e)
         {
             MovePanel(btnReserve);
+            userControlClient1.Hide();
+            userControlRoom1.Hide();
+            userControlReservation1.Show();
+            dashboard1.Hide();
+            userControlSetting1.Hide();
+
         }
 
-        private void btnService_Click(object sender, EventArgs e)
-        {
-            MovePanel(btnService);
-        }
+       
 
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-            MovePanel(btnPayment);
-        }
+    
 
-        private void btnReview_Click(object sender, EventArgs e)
-        {
-            MovePanel(btnReview);
-        }
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form2 fd = new Form2();
@@ -87,5 +106,40 @@ namespace Tolip
             this.Hide();
         }
 
+
+        private void btnSetting_Click_1(object sender, EventArgs e)
+        {
+            MovePanel(btnSetting);
+
+            userControlSetting1.Clear();
+            userControlClient1.Hide();
+            userControlRoom1.Hide();
+            userControlReservation1.Hide();
+            dashboard1.Hide();
+            userControlSetting1.Show();
+        }
+
+
+        private void linkLabel1_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                
+                timer1.Stop();
+
+                
+                Username = string.Empty;
+                this.Hide();
+                
+                Form2 loginForm = new Form2(); 
+                loginForm.Show();
+
+                
+                this.Close();
+            }
+        }
+
+       
     }
 }

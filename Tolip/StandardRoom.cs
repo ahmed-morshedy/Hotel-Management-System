@@ -22,25 +22,48 @@ namespace Tolip
         public abstract void ShowDetails();
     }
 
-    public class StandardRoom : Room
+    public class SingleRoom : Room
     {
-        public StandardRoom(string phoneNumber, string free)
-            : base("Standard", phoneNumber, free) { }
+        public SingleRoom(string phoneNumber, string free)
+            : base("Single", phoneNumber, free) { }
 
         public override void ShowDetails()
         {
-            Console.WriteLine($"Standard Room - Phone: {PhoneNumber}, Free: {Free}");
+            Console.WriteLine($"Single Room - Phone: {PhoneNumber}, Free: {Free}");
         }
     }
 
-    public class DeluxeRoom : Room
+    public class DoubleRoom : Room
     {
-        public DeluxeRoom(string phoneNumber, string free)
-            : base("Deluxe", phoneNumber, free) { }
+        public DoubleRoom(string phoneNumber, string free)
+            : base("Double", phoneNumber, free) { }
 
         public override void ShowDetails()
         {
-            Console.WriteLine($"Deluxe Room - Phone: {PhoneNumber}, Free: {Free}");
+            Console.WriteLine($"Double Room - Phone: {PhoneNumber}, Free: {Free}");
+        }
+    }
+
+    public class FamilyRoom : Room
+    {
+        public FamilyRoom(string phoneNumber, string free)
+            : base("Family", phoneNumber, free) { }
+
+        public override void ShowDetails()
+        {
+            Console.WriteLine($"Family Room - Phone: {PhoneNumber}, Free: {Free}");
+        }
+    }
+
+
+    public class SuiteRoom : Room
+    {
+        public SuiteRoom(string phoneNumber, string free)
+            : base("Suite", phoneNumber, free) { }
+
+        public override void ShowDetails()
+        {
+            Console.WriteLine($"Suite Room - Phone: {PhoneNumber}, Free: {Free}");
         }
     }
     public static class RoomFactory
@@ -50,13 +73,13 @@ namespace Tolip
             switch (roomType)
             {
                 case "Single":
-                    return new StandardRoom(phoneNumber, free);
+                    return new SingleRoom(phoneNumber, free);
                 case "Double":
-                    return new DeluxeRoom(phoneNumber, free);
+                    return new DoubleRoom(phoneNumber, free);
                 case "Family":
-                    return new DeluxeRoom(phoneNumber, free);
+                    return new FamilyRoom(phoneNumber, free);
                 case "Suite":
-                    return new DeluxeRoom(phoneNumber, free);
+                    return new SuiteRoom(phoneNumber, free);
                 default:
                     throw new ArgumentException("Invalid room type");
             }

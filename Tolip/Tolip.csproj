@@ -59,6 +59,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +74,9 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Room.cs" />
+    <Compile Include="RoomFactory.cs" />
+    <Compile Include="StandardRoom.cs" />
     <Compile Include="User Controls\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>

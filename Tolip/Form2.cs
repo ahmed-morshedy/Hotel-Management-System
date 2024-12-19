@@ -29,57 +29,64 @@ namespace Tolip
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Define your connection string
+            // Get logger instance
+            Logger logger = Logger.GetInstance();
+
+            
             string connectionString = "Server=localhost;Database=Hotel_Management_System;Trusted_Connection=True;";
 
-            // Ensure username and password fields are not empty
+            
             if (textBoxUsername.Text.Trim() == string.Empty || textBoxPassword.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Please fill out all fields.", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                logger.Log("Attempted login with missing username or password.");
                 return;
             }
 
             try
             {
-            
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
+                    logger.Log("Database connection opened successfully.");
 
                     string query = "SELECT COUNT(1) FROM User_Table WHERE User_Name = @Username AND User_Password = @Password";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                      
                         cmd.Parameters.AddWithValue("@Username", textBoxUsername.Text);
                         cmd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
 
-                        
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        logger.Log($"Login query executed for user: {textBoxUsername.Text}");
 
                         if (count == 1)
                         {
-                         
+                            // Successful login
                             Home fd = new Home();
                             fd.Username = textBoxUsername.Text;
                             textBoxUsername.Clear();
                             textBoxPassword.Clear();
+                            logger.Log($"User '{fd.Username}' logged in successfully.");
                             fd.Show();
                             this.Hide();
                         }
                         else
                         {
-                            // If authentication fails
+                            // Failed login
                             MessageBox.Show("Invalid Username or Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            logger.Log($"Invalid login attempt for user: {textBoxUsername.Text}");
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Handle any errors that occur during the connection or execution
+                // Handle errors
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                logger.Log($"Error during login attempt: {ex.Message}");
             }
         }
+
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {

@@ -102,22 +102,41 @@ namespace Tolip.User_Controls
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Free = radioButtonYes.Checked ? "Yes" : radioButtonNo.Checked ? "No" : "";
+            string free = radioButtonYes.Checked ? "Yes" : radioButtonNo.Checked ? "No" : "";
 
-            if (comboBoxType.SelectedIndex == 0 || string.IsNullOrWhiteSpace(textBoxPhoneNo.Text) || Free == "")
+            if (comboBoxType.SelectedIndex == -1 || string.IsNullOrWhiteSpace(textBoxPhoneNo.Text) || free == "")
             {
                 MessageBox.Show("Please fill out all fields.", "Field Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
-            else
+
+            try
             {
-                bool check = dbHelper.AddRoom(comboBoxType.SelectedItem.ToString(), textBoxPhoneNo.Text.Trim(), Free);
-                if (check)
+               
+                string roomType = comboBoxType.SelectedItem.ToString();
+
+                // Create a room using the factory
+                Room room = RoomFactory.CreateRoom(roomType, textBoxPhoneNo.Text.Trim(), free);
+
+                
+                bool success = dbHelper.AddRoom(room.RoomType, room.PhoneNumber, room.Free);
+
+                if (success)
                 {
                     MessageBox.Show("Room added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
+                else
+                {
+                    MessageBox.Show("Failed to add room.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void dataGridViewRoom_CellClick_1(object sender, DataGridViewCellEventArgs e)

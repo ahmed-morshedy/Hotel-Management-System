@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Net;
 using System.Windows.Forms;
 
 namespace Tolip
@@ -148,21 +150,23 @@ namespace Tolip
         }
 
         // Add a new room
-        public bool AddRoom(string type, string phone, string free)
+        public bool AddRoom(string roomType, string phoneNumber, string free)
         {
+            
             try
             {
                 if (_connection.State == ConnectionState.Closed)
                     _connection.Open();
 
-                string query = "INSERT INTO Room_Table (Room_Type, Room_Phone, Room_Free) VALUES (@Type, @Phone, @Free)";
+                string query = "INSERT INTO Room_Table (Room_Type, Room_Phone, Room_Free) VALUES (@RoomType, @PhoneNumber, @Free)";
                 using (SqlCommand cmd = new SqlCommand(query, _connection))
                 {
-                    cmd.Parameters.AddWithValue("@Type", type);
-                    cmd.Parameters.AddWithValue("@Phone", phone);
+                    cmd.Parameters.AddWithValue("@RoomType", roomType);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
                     cmd.Parameters.AddWithValue("@Free", free);
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0;
 
-                    return cmd.ExecuteNonQuery() > 0;
                 }
             }
             catch (Exception ex)
@@ -176,6 +180,8 @@ namespace Tolip
                     _connection.Close();
             }
         }
+
+
 
         // Update a room
         public bool UpdateRoom(string roomNo, string type, string phone, string free)
